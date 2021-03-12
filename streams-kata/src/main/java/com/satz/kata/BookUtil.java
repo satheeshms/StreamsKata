@@ -1,5 +1,6 @@
 package com.satz.kata;
 
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
@@ -30,5 +31,9 @@ public class BookUtil {
 
     public static int getSumCostOfBooks(List<Book> books){
         return 0;
+    }
+
+    public static IntSummaryStatistics getIntSummaryStatistics(List<Book> books){
+        return new IntSummaryStatistics();
     }
 }

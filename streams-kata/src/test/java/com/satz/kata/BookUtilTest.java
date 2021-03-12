@@ -4,6 +4,7 @@ import static com.satz.kata.BookUtil.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
 
@@ -64,5 +65,14 @@ public class BookUtilTest {
         List<Book> books = List.of(b1, b2, b3, b4);
         int sumCost = getSumCostOfBooks(books);
         assertEquals(sumCost, b1.getPrice()+b2.getPrice()+b3.getPrice()+b4.getPrice());
+    }
+
+    @Test
+    public void intstats(){
+        List<Book> books = List.of(b1, b2, b3, b4);
+        IntSummaryStatistics stats = new IntSummaryStatistics();
+        books.forEach(b -> stats.accept(b.getPrice()));
+
+        
     }
 }
