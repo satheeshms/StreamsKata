@@ -1,6 +1,7 @@
 package com.satz.kata;
 
 import static com.satz.kata.BookUtil.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
@@ -49,6 +50,13 @@ public class BookUtilTest {
                         ,b3.getAuthor(), List.of(b3,b4));
         
         assertTrue(Maps.difference(expected, authors).areEqual());
+    }
+
+    @Test
+    public void avg(){
+        List<Book> books = List.of(b1, b2, b3, b4);
+        int avgCost = getAvgCostOfBooks(books);
+        assertEquals(avgCost, (b1.getPrice()+b2.getPrice()+b3.getPrice()+b4.getPrice())/4);
     }
 
 }
