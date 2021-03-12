@@ -72,7 +72,7 @@ public class BookUtilTest {
         List<Book> books = List.of(b1, b2, b3, b4);
         IntSummaryStatistics stats = new IntSummaryStatistics();
         books.forEach(b -> stats.accept(b.getPrice()));
-
-        
+        IntSummaryStatistics actual = getIntSummaryStatistics(books);
+        assertEquals(stats, actual);
     }
 }
