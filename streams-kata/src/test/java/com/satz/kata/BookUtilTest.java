@@ -59,4 +59,10 @@ public class BookUtilTest {
         assertEquals(avgCost, (b1.getPrice()+b2.getPrice()+b3.getPrice()+b4.getPrice())/4);
     }
 
+    @Test
+    public void sum(){
+        List<Book> books = List.of(b1, b2, b3, b4);
+        int sumCost = getSumCostOfBooks(books);
+        assertEquals(sumCost, b1.getPrice()+b2.getPrice()+b3.getPrice()+b4.getPrice());
+    }
 }
