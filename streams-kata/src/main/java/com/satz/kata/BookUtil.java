@@ -30,6 +30,7 @@ public class BookUtil {
     }
 
     public static int getSumCostOfBooks(List<Book> books){
+        //TODO: return the sum of cost of all books
         return 0;
     }
 
