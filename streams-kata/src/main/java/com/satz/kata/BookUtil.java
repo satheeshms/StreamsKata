@@ -34,6 +34,7 @@ public class BookUtil {
     }
 
     public static IntSummaryStatistics getIntSummaryStatistics(List<Book> books){
+        //TODO: update method to return the int statistics of the costs of the book
         return new IntSummaryStatistics();
     }
 }
