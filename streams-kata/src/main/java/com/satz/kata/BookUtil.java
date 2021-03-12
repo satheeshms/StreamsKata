@@ -23,4 +23,8 @@ public class BookUtil {
 
         return Map.of();
     }
+
+    public static int getAvgCostOfBooks(List<Book> books){
+        return 0;
+    }
 }
